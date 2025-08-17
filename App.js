@@ -1,8 +1,9 @@
 import express from 'express';
+import serverless from "serverless-http";
 import connectDB from './Configure/db.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import authRoute from './routes/UserRoutes.js';
+import authRoute from './Routes/UserRoutes.js';
 
 dotenv.config();
 
