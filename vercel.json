@@ -1,9 +1,14 @@
 {
   "version": 2,
   "builds": [
-    { "src": "server.js", "use": "@vercel/node" }
+    { "src": "App.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "server.js" }
-  ]
+    { "src": "/(.*)", "dest": "App.js" }
+  ],
+  "env": {
+    "MONGO_URL":"mongodb+srv://lakshikahiruni20:lm3GjMzoIdeIR38L@cluster0.5w7tdow.mongodb.net/householdjobs?retryWrites=true&w=majority&appName=Cluster0",
+
+    "PORT": "8000"
+  }
 }
