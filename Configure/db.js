@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
 
 
+
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/householdjobs", {
+   const uri = process.env.MONGO_URL;
+    await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
