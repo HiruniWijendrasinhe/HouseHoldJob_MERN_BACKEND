@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - #name: Run tests and collect coverage
+       #name: Run tests and collect coverage
         #run: npm test -- --coverage --watchAll=false
 
       - name: SonarCloud Scan
