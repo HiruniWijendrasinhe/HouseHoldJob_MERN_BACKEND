@@ -25,11 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-       #name: Run tests and collect coverage
-        #run: npm test -- --coverage --watchAll=false
-
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+      # SonarQube Scan - Uses the NEW official action
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Auto-provided by GitHub
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}    # You must create this secret
