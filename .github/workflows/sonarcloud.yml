@@ -31,3 +31,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Auto-provided by GitHub
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}    # You must create this secret
+          SONAR_HOST_URL: https://sonarcloud.io  
